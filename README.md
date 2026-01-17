@@ -1,1 +1,1 @@
-# RycandMorty
+# RycAndMorty
