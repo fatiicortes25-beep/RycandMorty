@@ -1,0 +1,104 @@
+/* ====== RESET BÁSICO ====== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== FONDO ====== */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+
+}
+
+/* ====== TARJETA PRINCIPAL ====== */
+.card {
+  width: 380px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ====== TÍTULO ====== */
+.card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* ====== INPUTS ====== */
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+}
+
+/* ====== BOTÓN ====== */
+.card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button{
+  width: 30%;
+  border: none;
+  background-color: rgb(60, 108, 212);
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 11px;
+  cursor: pointer;
+  
+
+}
+
+button:hover{
+  box-shadow: 5px 5px 15px grey;
+  background-color: rgb(69, 168, 226);
+  color: white;
+}
+
+.invisible {
+  display: none;
+}
+
+
