@@ -14,6 +14,19 @@ body {
 
 }
 
+/* ====== CONTENEDOR DE TARJETAS ====== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto; 
+}
+
 /* ====== TARJETA PRINCIPAL ====== */
 .card {
   width: 380px;
@@ -72,26 +85,28 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-button{
-  width: 30%;
+/* ====== BOTÓN GENÉRICO ====== */
+.search-wrapper button {
+  width: auto;
+  min-width: 7rem;
+  padding: 12px 20px;
+  border-radius: 10px;
   border: none;
-  background-color: rgb(60, 108, 212);
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
   font-weight: bold;
-  padding: 10px;
-  text-align: center;
-  border-radius: 11px;
   cursor: pointer;
-  
-
 }
 
-button:hover{
+
+button:hover {
   box-shadow: 5px 5px 15px grey;
   background-color: rgb(69, 168, 226);
   color: white;
@@ -99,6 +114,35 @@ button:hover{
 
 .invisible {
   display: none;
+}
+
+/* ====== BARRA DE BÚSQUEDA ====== */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.5rem auto;
+  width: 100%;
+  max-width: 37.5rem;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 50px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+button {
+  width: 5rem;
+  border: none;
+  background-color: rgb(60, 108, 212);
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 11px;
+  cursor: pointer;
 }
 
 

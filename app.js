@@ -52,6 +52,39 @@ const getId = (e) => {
     }
 }
 
+const searchCharacters = () => {
+  const query = searchInput.value.trim();
+  if (!query) return;
+
+  fetch(`${url}/?name=${query}`)
+    .then(response => response.json())
+    .then(data => {
+      container.innerHTML = ""; // limpiar resultados anteriores
+
+      if (data.error) {
+        container.innerHTML = `
+          <p style="color:white;">
+            No se encontraron personajes con "${query}"
+          </p>
+        `;
+      } else {
+        data.results.forEach(character => {
+          container.appendChild(card(character));
+        });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      container.innerHTML = `
+        <p style="color:white;">
+          Error al buscar personajes
+        </p>
+      `;
+    });
+};
+
+searchButton.addEventListener("click", searchCharacters);
+
 
 const page = Math.ceil(Math.random() * 42);
 fetch(url + '?page=' + page)
@@ -63,5 +96,8 @@ fetch(url + '?page=' + page)
         })
     })
 container.addEventListener('click', getId);
+
+
+
 
 
